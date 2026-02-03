@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -32,7 +32,6 @@
       padding: 48px 20px;
     }
 
-    /* HEADER */
     .header {
       display: grid;
       grid-template-columns: 1fr 180px;
@@ -69,7 +68,6 @@
       border: 4px solid #eadfcd;
     }
 
-    /* CONTACT BUTTON */
     .contact-btn {
       margin-top: 20px;
       padding: 10px 22px;
@@ -89,7 +87,6 @@
       color: #fff;
     }
 
-    /* SECTIONS */
     section {
       margin-top: 56px;
     }
@@ -110,11 +107,20 @@
       margin-bottom: 8px;
     }
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(20px, 1fr)); gap: 24px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+    }
 
-    .card { background: var(--panel); border: 2px solid #1f1f1f; border-radius: 16px; padding: 24px;      box-shadow: 0 20px 40px rgba(31, 26, 22, 0.12); }
+    .card {
+      background: var(--panel);
+      border: 2px solid #1f1f1f;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 20px 40px rgba(31, 26, 22, 0.12);
+    }
 
-    /* EXPERIENCE + PROJECTS */
     .exp-projects {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -145,7 +151,6 @@
       }
     }
 
-    /* MODAL */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -163,7 +168,7 @@
       padding: 36px 40px;
       max-width: 420px;
       width: 90%;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
       position: relative;
     }
 
@@ -200,7 +205,6 @@
 <body>
   <main class="container">
 
-    <!-- HEADER -->
     <header class="header">
       <div>
         <h1><span class="accent">Tarun</span> Raghupatruni</h1>
@@ -208,12 +212,11 @@
           Junior QA / Test Engineer<br>
           📧 taruntej.2024@gmail.com · 📞 +91 9154882399
         </p>
-        <button class="contact-btn" onclick="openContact()">Contact</button>
+        <button type="button" class="contact-btn" onclick="openContact()">Contact</button>
       </div>
       <img src="profile.jpg" alt="Tarun Raghupatruni" class="profile-pic">
     </header>
 
-    <!-- OBJECTIVE -->
     <section>
       <h2>Objective</h2>
       <p>
@@ -224,10 +227,10 @@
       </p>
     </section>
 
-    <!-- SKILLS -->
     <section>
       <h2>Technical Skills</h2>
       <div class="grid">
+
         <div class="card">
           <strong>Programming</strong>
           <ul>
@@ -239,17 +242,17 @@
         </div>
 
         <div class="card">
-          <strong>Testing & Tools</strong>
+          <strong>Testing &amp; Tools</strong>
           <ul>
             <li>Selenium WebDriver</li>
-            <li>Manual & Automation Testing</li>
+            <li>Manual &amp; Automation Testing</li>
             <li>Postman (API Testing)</li>
             <li>JIRA, Bugzilla, Bugasura</li>
           </ul>
         </div>
 
         <div class="card">
-          <strong>Frameworks & DevOps</strong>
+          <strong>Frameworks &amp; DevOps</strong>
           <ul>
             <li>TestNG</li>
             <li>Cucumber</li>
@@ -269,10 +272,10 @@
             <li>DeepSeek</li>
           </ul>
         </div>
+
       </div>
     </section>
 
-    <!-- EXPERIENCE + PROJECTS -->
     <section>
       <div class="exp-projects">
 
@@ -280,8 +283,8 @@
           <h2>Experience</h2>
           <p><strong>Analogue IT Solutions</strong> — Feb 2025 – Present</p>
           <ul>
-            <li>Manual & automation testing for web/mobile apps</li>
-            <li>Test case & scenario design</li>
+            <li>Manual &amp; automation testing for web/mobile apps</li>
+            <li>Test case &amp; scenario design</li>
             <li>Regression, UAT, system testing</li>
             <li>Selenium Hybrid Framework</li>
             <li>Defect tracking via JIRA, Bugzilla</li>
@@ -293,7 +296,7 @@
         <div class="card">
           <h2>Projects</h2>
           <ul>
-            <li><strong>Poshana</strong> – Diet & Nutrition App</li>
+            <li><strong>Poshana</strong> – Diet &amp; Nutrition App</li>
             <li><strong>Flythruu</strong> – Airport Cab Booking</li>
             <li><strong>Health Click</strong> – Hospital Management</li>
             <li><strong>LIFELET</strong> – AI Journaling App</li>
@@ -307,7 +310,6 @@
       </div>
     </section>
 
-    <!-- ACHIEVEMENTS -->
     <section>
       <h2>Achievements</h2>
       <ul>
@@ -322,10 +324,9 @@
 
   </main>
 
-  <!-- CONTACT MODAL -->
   <div class="modal-overlay" id="contactModal">
     <div class="modal">
-      <button class="close-btn" onclick="closeContact()">×</button>
+      <button type="button" class="close-btn" onclick="closeContact()">×</button>
       <h3>Contact Details</h3>
       <p><strong>Email:</strong> taruntej.2024@gmail.com</p>
       <p><strong>Phone:</strong> +91 9154882399</p>
@@ -342,7 +343,7 @@
       document.getElementById("contactModal").style.display = "none";
     }
 
-    document.getElementById("contactModal").addEventListener("click", function(e) {
+    document.getElementById("contactModal").addEventListener("click", function (e) {
       if (e.target === this) closeContact();
     });
   </script>
