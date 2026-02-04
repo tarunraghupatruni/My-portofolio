@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tarun Raghupatruni — QA Engineer</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -22,48 +22,32 @@
     * { box-sizing: border-box; }
 
     body {
-      margin: 0;
-      font-family: "Inter", system-ui, sans-serif;
+      margin: auto;
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: radial-gradient(circle at top, #1b1b25 0%, var(--bg) 45%);
       color: var(--text);
       line-height: 1.6;
     }
+    h3 {
+      color: rgba(255, 122, 24, 0.9);
+    }
 
-    a { color: inherit; text-decoration: none; }
-
+  
     .wrap {
-  max-width: 1100px;
-  margin: auto;
-  padding: 5px 5px 80px; /* top reduced */
-}
-
+      max-width: auto;
+      margin: auto;
+      padding: 40px 24px 80px;
+    }
 
     /* HERO */
     .hero {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 80px;              /* pushes image further right */
-  align-items: flex-start; /* IMPORTANT: aligns content to top */
-  margin-top: 0;
-}
-.hero > div {
-  margin-top: -20px;
-}
-.avatar {
-  justify-self: end;   /* pushes image to right edge */
-  margin-top: -10px;  /* slight upward lift */
-}
-section {
-  margin-top: 80px;
-}
-
-.hero + section {
-  margin-top: 60px; /* tighter gap between hero and skills */
-}
-.section-title {
-  margin-top: -10px;
-}
-
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 80px;
+      align-items: flex-start;
+      margin-top: 0;
+      
+    }
 
     .hero h1 {
       font-size: clamp(2.8rem, 4vw, 4rem);
@@ -85,6 +69,7 @@ section {
       display: flex;
       gap: 16px;
     }
+   
 
     .btn {
       padding: 12px 22px;
@@ -93,12 +78,12 @@ section {
       font-weight: 600;
       cursor: pointer;
       transition: all 0.25s ease;
+      border: none;
     }
 
     .btn-primary {
       background: var(--accent);
       color: #000;
-      border: none;
     }
 
     .btn-primary:hover {
@@ -115,6 +100,18 @@ section {
     .btn-ghost:hover {
       background: rgba(255,255,255,0.05);
     }
+    .company-link {
+  color: rgba(255, 122, 24, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.company-link:hover {
+  border-bottom-color: rgba(255, 122, 24, 0.8);
+}
+
 
     .avatar {
       width: 240px;
@@ -122,10 +119,14 @@ section {
       border-radius: 50%;
       object-fit: cover;
       border: 1px solid var(--border);
-      box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+      box-shadow:  0 20px 40px rgba(0,0,0,0.6),
+                   0 0 40px rgba(255, 224, 202, 0.35);
+
+      justify-self: end;
     }
 
-    section { margin-top: 120px; }
+    section { margin-top: 80px; }
+    .hero + section { margin-top: 60px; }
 
     .section-title {
       font-size: 1.6rem;
@@ -144,91 +145,140 @@ section {
 
     .card {
       background: linear-gradient(180deg, #171720, #12121a);
-      border: 1px solid var(--border);
-      border-radius: 20px;
+      border-radius: 25px;
       padding: 28px;
-    }
+      padding-top: 10px;
+      border: 1px solid bisque;
 
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 1.1rem;
     }
-
-    .card ul {
-      padding-left: 18px;
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .card li { margin-bottom: 8px; }
 
     .muted {
       color: var(--muted);
       font-size: 0.95rem;
     }
 
-    /* EXPERIENCE */
-    .timeline {
-      display: grid;
-      gap: 32px;
+    
+
+    .project-item {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+      transition: transform 0.2s ease, background 0.2s ease;
     }
 
-    .role {
-      border-left: 2px solid var(--accent);
-      padding-left: 20px;
+    .project-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
     }
 
-    .role h4 {
+    .project-item:hover {
+      transform: translateX(4px);
+      background: rgba(255,255,255,0.02);
+      border-radius: 12px;
+      padding-left: 8px;
+    }
+
+    .project-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      padding: 2px;
+    }
+
+    .project-item h3 {
       margin: 0;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
     }
 
-    .role span {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .role p {
-      margin-top: 12px;
-      color: var(--muted);
+    .project-item p {
+      margin: 4px 0 0;
+      font-size: 0.92rem;
+      line-height: 1.4;
     }
 
     footer {
-      margin-top: 140px;
+      margin-top: 120px;
       text-align: center;
       color: var(--muted);
       font-size: 0.9rem;
     }
+    .card ul {
+  padding-left: 18px;
+  margin-top: 12px;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+.exp-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: stretch; /* IMPORTANT */
+}
+.projects-card {
+  height: 100%;              /* match Experience height */
+  max-height: 520px;         /* controls visible height */
+  overflow-y: auto;          /* enables scrolling */
+  padding-right: 16px;       /* space for scrollbar */
+}
+.projects-card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.projects-card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.projects-card::-webkit-scrollbar-thumb {
+  background: rgba(255, 122, 24, 0.5);
+  border-radius: 10px;
+}
+@media (max-width: 900px) {
+  .projects-card {
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+
+
+@media (max-width: 900px) {
+  .exp-projects {
+    grid-template-columns: 1fr;
+  }
+}
+
 
     /* MODAL */
     .overlay {
       position: fixed;
       inset: 0;
-      background: rgba(104, 94, 94, 0.7);
+      background: rgba(0,0,0,0.65);
+      backdrop-filter: blur(6px);
       display: none;
       align-items: center;
       justify-content: center;
       z-index: 999;
     }
 
-     .modal {
-  background: var(--panel);
-  border: 1px solid #ffffff;
-  border-radius: 24px;
-  padding: 40px;
-  max-width: 420px;
-  width: 90%;
-  position: relative;
-
-  box-shadow:
-  0 12px 40px rgba(255, 122, 24, 0.45),
-  0 30px 80px rgba(255, 122, 24, 0.35);
-
-}
-
-
-    .modal h3 { margin-top: 0; }
+    .modal {
+      background: var(--panel);
+      border: 1px solid rgba(255,122,24,0.6);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 420px;
+      width: 90%;
+      position: relative;
+      box-shadow:
+        0 8px 24px rgba(0,0,0,0.6),
+        0 20px 60px rgba(255,122,24,0.35),
+        0 40px 100px rgba(255,122,24,0.25);
+    }
 
     .close {
       position: absolute;
@@ -271,114 +321,167 @@ section {
         </p>
 
         <div class="hero-actions">
-          <button type="button" class="btn btn-primary" onclick="openModal()">Contact</button>
+          <button class="btn btn-primary" onclick="openModal()">Contact</button>
           <a href="mailto:taruntej.2024@gmail.com" class="btn btn-ghost">Email Me</a>
         </div>
       </div>
 
       <img src="profile.jpg" alt="Tarun Raghupatruni" class="avatar">
     </section>
-
-    <!-- SKILLS -->
-    <section>
-      <h2 class="section-title"><span>Skills</span> &amp; Tooling</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Testing</h3>
-          <ul>
-            <li>Manual &amp; Automation Testing</li>
-            <li>Selenium WebDriver</li>
-            <li>API Testing (Postman)</li>
-            <li>Regression &amp; UAT</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Development</h3>
-          <ul>
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li>HTML5 &amp; CSS3</li>
-            <li>Git &amp; GitHub</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Frameworks</h3>
-          <ul>
-            <li>TestNG</li>
-            <li>Cucumber</li>
-            <li>Maven</li>
-            <li>Jenkins</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section>
-      <h2 class="section-title"><span>Experience</span></h2>
-      <div class="timeline">
-        <div class="role">
-          <h4>Junior QA Engineer — Analogue IT Solutions</h4>
-          <span>Feb 2025 – Present</span>
-          <p>
-            Performed manual and automation testing for web and mobile applications.
-            Designed test cases, executed regression and UAT cycles, validated APIs
-            using Postman, and collaborated with developers in Agile Scrum teams.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-   <section>
-  <h2 class="section-title"><span>Projects</span></h2>
+    <!-- SKILLS & TOOLING -->
+<section>
+  <h2 class="section-title"><span>Skills</span> &amp; Tooling</h2>
 
   <div class="grid">
+
     <div class="card">
-      <h3>Poshana</h3>
-      <p class="muted">Diet &amp; Nutrition app — end-to-end functional and API testing.</p>
-
-      <h3>Flythruu</h3>
-      <p class="muted">Airport cab booking platform — booking flow and regression testing.</p>
-
-      <h3>Health Click</h3>
-      <p class="muted">Hospital management system — validation of patient workflows.</p>
-
-      <h3>LIFELET</h3>
-      <p class="muted">AI journaling app — UX, AI response, and data persistence testing.</p>
-
-      <h3>CinePass</h3>
-      <p class="muted">Movie ticket booking system — transactional and edge-case testing.</p>
-
-      <h3>Zipck</h3>
-      <p class="muted">Multi-service e-commerce platform — integration and system testing.</p>
-
-      <h3>Yaarish</h3>
-      <p class="muted">Service booking platform — scheduling and notification testing.</p>
-
-      <h3>TGNPDCL</h3>
-      <p class="muted">Government utility platform — data accuracy and form validations.</p>
+      <h3>Testing</h3>
+      <ul class="muted">
+        <li>Manual &amp; Automation Testing</li>
+        <li>Selenium WebDriver</li>
+        <li>API Testing (Postman)</li>
+        <li>Regression, Smoke &amp; UAT Testing</li>
+      </ul>
     </div>
-  </div>
 
+    <div class="card">
+      <h3>Development</h3>
+      <ul class="muted">
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>HTML5 &amp; CSS3</li>
+        <li>Git &amp; GitHub</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Frameworks</h3>
+      <ul class="muted">
+        <li>TestNG</li>
+        <li>Cucumber</li>
+        <li>Maven</li>
+        <li>Jenkins</li>
+      </ul>
+    </div>
+
+  </div>
 </section>
 
 
-    <footer>
-      © Tarun Raghupatruni · Hyderabad, India
-    </footer>
+<!-- EXPERIENCE + PROJECTS -->
+<section>
+  <div class="exp-projects">
 
+    <!-- EXPERIENCE -->
+    <div>
+      <h2 class="section-title"><span>Experience</span></h2>
+
+      <div class="card">
+        <h3>
+          Junior QA Engineer —
+          <a href="https://analogueitsolutions.com" target="_blank" rel="noopener" class="company-link">
+            Analogue IT Solutions
+          </a>
+        </h3>
+        <p class="muted">Feb 2025 – Present · Hyderabad</p>
+
+        <ul class="muted">
+          <li>Manual and automation testing for web and mobile applications</li>
+          <li>Test case and test scenario design</li>
+          <li>Functional, regression, smoke, sanity, and UAT testing</li>
+          <li>Selenium automation using TestNG and Cucumber</li>
+          <li>REST API testing using Postman</li>
+          <li>Defect tracking with JIRA, Bugzilla, and Bugasura</li>
+          <li>Agile Scrum collaboration with dev teams</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div>
+      <h2 class="section-title"><span>Projects</span></h2>
+
+      <div class="card projects-card">
+
+        <div class="project-item">
+          <img src="poshana.png" class="project-logo" alt="Poshana">
+          <div>
+            <h4>Poshana</h4>
+            <p class="muted">Diet &amp; Nutrition app — functional and API testing.</p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <img src="flythruu.png" class="project-logo" alt="Flythruu">
+          <div>
+            <h4>Flythruu</h4>
+            <p class="muted">Airport cab booking platform — booking flow testing.</p>
+          </div>
+        </div>
+
+        
+        <div class="project-item">
+          <img src="lifelet.png" class="project-logo" alt="LIFELET">
+          <div>
+            <h4>LIFELET</h4>
+            <p class="muted">AI journaling app — UX and data persistence testing.</p>
+          </div>
+        </div>
+        
+        <div class="project-item">
+          <img src="CINEPASS.png" class="project-logo" alt="LIFELET">
+          <div>
+            <h4>Cinepass</h4>
+            <p class="muted">Movie ticket booking system - transactional and edge case testing.</p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="zipck.png" class="project-logo" alt="LIFELET">
+          <div>
+              <h4>Zipck</h4>
+              <p class="muted">Multi-service-ecommerce platdform - integration and system testing.</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <img src="yaarish.png" class="project-logo" alt="LIFELET">
+            <div>
+              <h4>yaarishh</h4>
+              <p class="muted">Service booking platform - scheduling and notification Testign.</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <img src="n-d.png" class="project-logo" alt="LIFELET">
+            <div>
+              <h4>TGNPDCL</h4>
+              <p class="muted">Government utility platform - data accuracy and form validations.</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <img src="healthclick.png" class="project-logo" alt="Health Click">
+            <div>
+              <h4>Health Click</h4>
+              <p class="muted">Hospital management system — patient workflow validation.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  © Tarun Raghupatruni · Hyderabad, India
+</footer>
   </main>
 
   <!-- CONTACT MODAL -->
   <div class="overlay" id="modal">
     <div class="modal">
-      <button type="button" class="close" onclick="closeModal()">×</button>
+      <button class="close" onclick="closeModal()">×</button>
       <h3>Contact</h3>
       <p>Email: taruntej.2024@gmail.com</p>
       <p>Phone: +91 9154882399</p>
+      <p>LinkedIn: www.linkedin.com/in/tarun-raghupatruni</p>
       <p>Location: Hyderabad, India</p>
     </div>
   </div>
@@ -386,11 +489,13 @@ section {
   <script>
     function openModal() {
       document.getElementById("modal").style.display = "flex";
-    }
-
+    }    
     function closeModal() {
       document.getElementById("modal").style.display = "none";
     }
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") closeModal();
+    });
   </script>
 </body>
 </html>
