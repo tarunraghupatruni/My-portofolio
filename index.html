@@ -32,14 +32,25 @@ body{
 
 /* HERO */
 .hero{
-  max-width:1200px;
+  max-width:1500px;
   margin:auto;
   padding:60px 32px;
   display:grid;
-  grid-template-columns:1.2fr 0.8fr;
+  grid-template-columns:1.2fr 0.8fr; /* LEFT | RIGHT */
   gap:50px;
   align-items:center;
 }
+
+.hero-content{
+  display:flex;
+  flex-direction:column;
+}
+
+.hero-image{
+  display:flex;
+  justify-content:flex-end; /* PUSH IMAGE TO RIGHT */
+}
+
 
 .hero h1{margin:0;font-size:3rem}
 .hero h1 span{color:var(--accent)}
@@ -51,6 +62,29 @@ body{
   display:flex;
   gap:16px;
 }
+.qa-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+
+  margin-top:14px;
+  padding:4px 10px;
+
+  font-size:0.7rem;
+  font-weight:500;
+  line-height:1;
+
+  border-radius:999px;
+  background:rgba(30,201,183,0.12);
+  border:1px solid rgba(30,201,183,0.45);
+  color:#dff7f4;
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.35),
+    0 0 12px rgba(30,201,183,0.35);
+  width:fit-content; /* IMPORTANT: prevents full-width stretch */
+}
+
+
 
 .btn{
   padding:12px 22px;
@@ -95,7 +129,7 @@ body{
 }
 
 .section-inner{
-  max-width:1200px;
+  max-width:1500px;
   margin:auto;
 }
 
@@ -140,9 +174,11 @@ body{
   border-radius:16px;
   padding:16px;
   box-shadow:0 15px 30px rgba(0,0,0,.15);
+  height: 250px;
+  width: 200px;
 }
 
-.project img{width:100%;border-radius:12px}
+.project img{width:50%;border-radius:12px}
 .project h4{margin:12px 0 4px}
 .project span{font-size:.9rem;color:#555}
 
@@ -237,13 +273,20 @@ footer{
 
 <!-- HERO -->
 <section class="hero">
-  <div>
+  <!-- LEFT CONTENT -->
+  <div class="hero-content">
     <h1><span>Tarun</span> Raghupatruni</h1>
     <h2>Junior QA Engineer</h2>
+
     <p>
-      Junior QA / Test Engineer with experience in manual and automation testing,
-      Selenium WebDriver, API testing, and defect management.
+      Junior QA / Test Engineer with experience in manual and
+      automation testing, Selenium WebDriver, API testing, and defect
+      management.
     </p>
+
+    <div class="qa-badge">
+      ✔ Quality Focused · Automation Ready · API Tested
+    </div>
 
     <div class="hero-actions">
       <button class="btn btn-primary" id="contactBtn">Contact Me</button>
@@ -251,10 +294,14 @@ footer{
     </div>
   </div>
 
-  <div class="avatar-ring">
-    <img src="profile.jpg" class="avatar" alt="Tarun">
+  <!-- RIGHT IMAGE -->
+  <div class="hero-image">
+    <div class="avatar-ring">
+      <img src="profile.jpg" class="avatar" alt="Tarun">
+    </div>
   </div>
 </section>
+
 
 <!-- EXPERIENCE -->
 <section class="section">
