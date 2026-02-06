@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tarun Raghupatruni | QA Engineer</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,61 +30,44 @@ body{
   color:var(--text-dark);
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
   max-width:1500px;
   margin:auto;
   padding:60px 32px;
   display:grid;
-  grid-template-columns:1.2fr 0.8fr; /* LEFT | RIGHT */
+  grid-template-columns:1.2fr 0.8fr;
   gap:50px;
   align-items:center;
 }
 
-.hero-content{
-  display:flex;
-  flex-direction:column;
-}
-
-.hero-image{
-  display:flex;
-  justify-content:flex-end; /* PUSH IMAGE TO RIGHT */
-}
-
+.hero-content{display:flex;flex-direction:column}
+.hero-image{display:flex;justify-content:flex-end}
 
 .hero h1{margin:0;font-size:3rem}
 .hero h1 span{color:var(--accent)}
-.hero h2{color:var(--accent-soft);font-weight:500}
+.hero h2{color:var(--accent-soft);font-weight:500;margin:8px 0}
 .hero p{color:var(--text-muted);max-width:520px}
+
+.qa-badge{
+  margin-top:14px;
+  padding:4px 10px;
+  font-size:0.7rem;
+  border-radius:999px;
+  background:rgba(30,201,183,.12);
+  border:1px solid rgba(30,201,183,.45);
+  color:#dff7f4;
+  width:fit-content;
+  box-shadow:
+    0 4px 10px rgba(0,0,0,.35),
+    0 0 12px rgba(30,201,183,.35);
+}
 
 .hero-actions{
   margin-top:24px;
   display:flex;
   gap:16px;
 }
-.qa-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-
-  margin-top:14px;
-  padding:4px 10px;
-
-  font-size:0.7rem;
-  font-weight:500;
-  line-height:1;
-
-  border-radius:999px;
-  background:rgba(30,201,183,0.12);
-  border:1px solid rgba(30,201,183,0.45);
-  color:#dff7f4;
-  box-shadow:
-    0 4px 10px rgba(0,0,0,0.35),
-    0 0 12px rgba(30,201,183,0.35);
-  width:fit-content; /* IMPORTANT: prevents full-width stretch */
-}
-
-
 
 .btn{
   padding:12px 22px;
@@ -119,7 +102,7 @@ body{
   object-fit:cover;
 }
 
-/* SECTION */
+/* ================= SECTION ================= */
 .section{
   background:var(--bg-light);
   color:var(--text-light);
@@ -128,12 +111,14 @@ body{
   padding:50px 32px;
 }
 
-.section-inner{
-  max-width:1500px;
-  margin:auto;
+.section-inner{max-width:1500px;margin:auto}
+
+.section-title{
+  color:var(--accent);
+  margin-bottom:24px;
 }
 
-/* EXPERIENCE */
+/* ================= EXPERIENCE ================= */
 .experience-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -148,17 +133,20 @@ body{
   box-shadow:0 18px 36px rgba(0,0,0,.25);
 }
 
-.exp-card h3{color:var(--accent);margin-top:0}
-.exp-card p{color:#aabcbc}
-
+.card h3{color:var(--accent);margin-top:0}
+.card p{color:#aabcbc}
 .card ul{padding-left:18px}
 .card li{margin-bottom:8px}
 
-/* PROJECT CAROUSEL */
+/* ================= PROJECT CAROUSEL ================= */
 .carousel{
   position:relative;
+  margin-top:24px;
+  overflow:visible;
+}
+
+.carousel-track-wrapper{
   overflow:hidden;
-  margin-top:32px;
 }
 
 .carousel-track{
@@ -168,21 +156,23 @@ body{
 }
 
 .project{
-  min-width:280px;
-  background:#fff;
-  color:#000;
+  min-width:260px;
+  background:#ffffff;
+  color:#000000;
   border-radius:16px;
   padding:16px;
   box-shadow:0 15px 30px rgba(0,0,0,.15);
-  height: 250px;
-  width: 200px;
 }
 
-.project img{width:50%;border-radius:12px}
+.project img{
+  width:100%;
+  border-radius:12px;
+}
+
 .project h4{margin:12px 0 4px}
 .project span{font-size:.9rem;color:#555}
 
-/* CAROUSEL BUTTONS */
+/* ================= CAROUSEL BUTTONS ================= */
 .carousel-btn{
   position:absolute;
   top:50%;
@@ -192,31 +182,24 @@ body{
   border-radius:50%;
   background:rgba(30,201,183,.9);
   border:none;
-  color:#003b36;
   font-size:1.4rem;
   font-weight:700;
   cursor:pointer;
-  display:flex;
-  align-items:center;
-  justify-content:center;
   box-shadow:0 10px 30px rgba(30,201,183,.45);
-  transition:.25s;
-  z-index:2;
+  z-index:10;
 }
 
 .carousel-btn:hover{
   transform:translateY(-50%) scale(1.08);
+  box-shadow:
+    0 0 0 6px rgba(30,201,183,.15),
+    0 12px 30px rgba(30,201,183,.45);
 }
 
-.carousel-btn:disabled{
-  opacity:.35;
-  cursor:not-allowed;
-}
+.prev{left:-22px}
+.next{right:-22px}
 
-.prev{left:12px}
-.next{right:12px}
-
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer{
   text-align:center;
   padding:24px;
@@ -224,7 +207,7 @@ footer{
   font-size:.9rem;
 }
 
-/* CONTACT MODAL */
+/* ================= MODAL ================= */
 .modal-overlay{
   position:fixed;
   inset:0;
@@ -241,14 +224,10 @@ footer{
   color:var(--text-dark);
   padding:32px;
   border-radius:20px;
-  width:90%;
   max-width:420px;
+  width:90%;
   position:relative;
-  box-shadow:0 30px 80px rgba(0,0,0,.5);
 }
-
-.modal h3{margin-top:0;color:var(--accent)}
-.modal p{color:var(--text-muted);margin:10px 0}
 
 .close-btn{
   position:absolute;
@@ -257,14 +236,16 @@ footer{
   background:none;
   border:none;
   font-size:1.5rem;
-  color:var(--text-muted);
   cursor:pointer;
+  color:var(--text-muted);
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;text-align:center}
+  .hero-image{justify-content:center}
   .experience-grid{grid-template-columns:1fr}
+  .prev,.next{display:none}
 }
 </style>
 </head>
@@ -273,53 +254,47 @@ footer{
 
 <!-- HERO -->
 <section class="hero">
-  <!-- LEFT CONTENT -->
   <div class="hero-content">
     <h1><span>Tarun</span> Raghupatruni</h1>
     <h2>Junior QA Engineer</h2>
 
     <p>
-      Junior QA / Test Engineer with experience in manual and
-      automation testing, Selenium WebDriver, API testing, and defect
-      management.
+      Junior QA / Test Engineer with experience in manual and automation testing,
+      Selenium WebDriver, API testing, and defect management.
     </p>
 
-    <div class="qa-badge">
-      ✔ Quality Focused · Automation Ready · API Tested
-    </div>
+    <div class="qa-badge">✔ Quality Focused · Automation Ready · API Tested</div>
 
     <div class="hero-actions">
-      <button class="btn btn-primary" id="contactBtn">Contact Me</button>
+      <button type="button" class="btn btn-primary" id="contactBtn">Contact Me</button>
       <a href="mailto:taruntej.2024@gmail.com" class="btn btn-secondary">Email Me</a>
     </div>
   </div>
 
-  <!-- RIGHT IMAGE -->
   <div class="hero-image">
     <div class="avatar-ring">
-      <img src="profile.jpg" class="avatar" alt="Tarun">
+      <img src="profile.jpg" alt="Tarun Raghupatruni profile photo" class="avatar">
     </div>
   </div>
 </section>
 
-
 <!-- EXPERIENCE -->
 <section class="section">
   <div class="section-inner">
-    <h2 style="color:var(--accent)">Experience</h2>
+    <h2 class="section-title">Experience</h2>
 
     <div class="experience-grid">
-      <div class="card exp-card">
+      <div class="card">
         <h3>Junior QA Engineer — Analogue IT Solutions</h3>
         <p>Feb 2025 – Present · Hyderabad</p>
         <ul>
-          <li>Manual & automation testing</li>
+          <li>Manual &amp; automation testing</li>
           <li>Selenium, Postman</li>
           <li>Agile Scrum collaboration</li>
         </ul>
       </div>
 
-      <div class="card exp-card">
+      <div class="card">
         <h3>Learning Testing</h3>
         <p>Feb 2024 – July 2024 · Hyderabad</p>
         <ul>
@@ -329,28 +304,25 @@ footer{
         </ul>
       </div>
     </div>
-  </div>
-<!-- </section> -->
 
-<!-- PROJECTS -->
-<!-- <section class="section"> -->
-  <div class="section-inner">
-    <h2 style="color:var(--accent)">Projects</h2>
+    <h2 class="section-title">Projects</h2>
 
     <div class="carousel" id="carousel">
-      <button class="carousel-btn prev" id="prevBtn">‹</button>
+      <button type="button" class="carousel-btn prev" id="prevBtn">‹</button>
 
-      <div class="carousel-track" id="track">
-        <div class="project"><img src="poshana.png"><h4>Poshana</h4><span>Diet & Nutrition</span></div>
-        <div class="project"><img src="flythruu.png"><h4>Flythruu</h4><span>Cab Booking</span></div>
-        <div class="project"><img src="lifelet.png"><h4>LIFELET</h4><span>AI Journaling</span></div>
-        <div class="project"><img src="cinepass.png"><h4>CinePass</h4><span>Movie Booking</span></div>
-        <div class="project"><img src="zipck.png"><h4>Zipck</h4><span>E-commerce</span></div>
-        <div class="project"><img src="yaarish.png"><h4>Yaarish</h4><span>Service Platform</span></div>
-        <div class="project"><img src="healthclick.png"><h4>Health Click</h4><span>Hospital System</span></div>
+      <div class="carousel-track-wrapper">
+        <div class="carousel-track" id="track">
+          <div class="project"><img src="poshana.png" alt="Poshana project"><h4>Poshana</h4><span>Diet &amp; Nutrition</span></div>
+          <div class="project"><img src="flythruu.png" alt="Flythruu project"><h4>Flythruu</h4><span>Cab Booking</span></div>
+          <div class="project"><img src="lifelet.png" alt="Lifelet project"><h4>LIFELET</h4><span>AI Journaling</span></div>
+          <div class="project"><img src="cinepass.png" alt="CinePass project"><h4>CinePass</h4><span>Movie Booking</span></div>
+          <div class="project"><img src="zipck.png" alt="Zipck project"><h4>Zipck</h4><span>E-commerce</span></div>
+          <div class="project"><img src="yaarish.png" alt="Yaarish project"><h4>Yaarish</h4><span>Service Platform</span></div>
+          <div class="project"><img src="healthclick.png" alt="Health Click project"><h4>Health Click</h4><span>Hospital System</span></div>
+        </div>
       </div>
 
-      <button class="carousel-btn next" id="nextBtn">›</button>
+      <button type="button" class="carousel-btn next" id="nextBtn">›</button>
     </div>
   </div>
 </section>
@@ -362,7 +334,7 @@ footer{
 <!-- CONTACT MODAL -->
 <div class="modal-overlay" id="contactModal">
   <div class="modal">
-    <button class="close-btn" id="closeModalBtn">×</button>
+    <button type="button" class="close-btn" id="closeModalBtn">×</button>
     <h3>Contact Details</h3>
     <p>Email: taruntej.2024@gmail.com</p>
     <p>Phone: +91 9154882399</p>
@@ -372,71 +344,32 @@ footer{
 
 <script>
 /* CONTACT MODAL */
-const contactBtn = document.getElementById("contactBtn");
-const modal = document.getElementById("contactModal");
-const closeBtn = document.getElementById("closeModalBtn");
+const contactBtn=document.getElementById("contactBtn");
+const modal=document.getElementById("contactModal");
+const closeBtn=document.getElementById("closeModalBtn");
 
-contactBtn.addEventListener("click", () => {
-  modal.style.display = "flex";
-});
+contactBtn.onclick=()=>modal.style.display="flex";
+closeBtn.onclick=()=>modal.style.display="none";
+modal.onclick=e=>{if(e.target===modal)modal.style.display="none"};
 
-closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-
-modal.addEventListener("click", e => {
-  if (e.target === modal) modal.style.display = "none";
-});
-
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") modal.style.display = "none";
-});
-
-/* CAROUSEL LOGIC */
-const track = document.getElementById("track");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-let index = 0;
-let autoScroll;
+/* CAROUSEL */
+const track=document.getElementById("track");
+const prev=document.getElementById("prevBtn");
+const next=document.getElementById("nextBtn");
+let index=0;
 
 function slideWidth(){
-  const slide = track.children[0];
-  const style = getComputedStyle(slide);
-  return slide.offsetWidth + parseInt(style.marginRight);
+  return track.children[0].offsetWidth+20;
 }
 
-function updateCarousel(){
-  const w = slideWidth();
-  const visible = Math.floor(document.getElementById("carousel").offsetWidth / w);
-  const maxIndex = track.children.length - visible;
-
-  index = Math.max(0, Math.min(index, maxIndex));
-  track.style.transform = `translateX(${-index * w}px)`;
-
-  prevBtn.disabled = index === 0;
-  nextBtn.disabled = index === maxIndex;
+function update(){
+  track.style.transform=`translateX(${-index*slideWidth()}px)`;
 }
 
-prevBtn.onclick = () => { index--; updateCarousel(); };
-nextBtn.onclick = () => { index++; updateCarousel(); };
+prev.onclick=()=>{index=Math.max(0,index-1);update()};
+next.onclick=()=>{index++;update()};
 
-function startAuto(){
-  autoScroll = setInterval(() => {
-    index++;
-    updateCarousel();
-    if (nextBtn.disabled) index = 0;
-  }, 3500);
-}
-
-function stopAuto(){ clearInterval(autoScroll); }
-
-startAuto();
-
-document.getElementById("carousel").addEventListener("mouseenter", stopAuto);
-document.getElementById("carousel").addEventListener("mouseleave", startAuto);
-window.addEventListener("resize", updateCarousel);
-
-updateCarousel();
+setInterval(()=>{index++;update()},3500);
 </script>
 
 </body>
